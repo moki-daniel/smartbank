@@ -32,28 +32,28 @@ const start = async() => {
 
         if (choice == 1) {
             console.log(`\n ✅ Create Account`);
-            const acId = parseInt(await ip("Enter Account Id"));
-            const acNm = await ip("Enter Account Name");
+            const account_id = parseInt(await ip("Enter Account Id"));
+            const account_name = await ip("Enter Account Name");
             const balance = 0;
-            createNewAccount({ acId, acNm, balance });
+            createNewAccount({ account_id, account_name, balance });
         } else if (choice == 2) {
             console.log(`\n ✅ Deposit Money`);
 
-            const acId = parseInt(await ip("Enter Account Id"));
+            const account_id = parseInt(await ip("Enter Account Id"));
             const amount = parseFloat(await ip("Enter Amount"));
 
-            deposit({ acId, amount });
+            deposit({ account_id, amount });
         } else if (choice == 3) {
             console.log(`\n ✅ Withdraw Money`);
 
-            const acId = parseInt(await ip("Enter Account Id"));
+            const account_id = parseInt(await ip("Enter Account Id"));
             const amount = parseFloat(await ip("Enter Amount"));
 
-            withdraw({ acId, amount });
+            withdraw({ account_id, amount });
         } else if (choice == 4) {
             console.log(`\n ✅ Check Balance`);
-            const acId = parseInt(await ip("Enter Account Id"));
-            balance(acId);
+            const account_id = parseInt(await ip("Enter Account Id"));
+            balance(account_id);
         } else if (choice == 5) {
             console.log(`\n ✅ Please Transfer Money`);
             const srcId = parseInt(await ip("Enter Source Account Id"));
